@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AquaTech · Infinity Grid</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       HEADER / NAV — Checkbox Hack (sin JS)
+  ════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Input oculto para el Checkbox Hack -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+
+      <!-- Marca -->
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Aqua<strong>Tech</strong></span>
+      </div>
+
+      <!-- Botón hamburger (móvil) — abre menú -->
+      <label for="nav-toggle" class="nav-burger" aria-label="Abrir menú">
+        <span class="sprite sprite-hamburger"></span>
+      </label>
+
+      <!-- Navegación principal -->
+      <nav class="main-nav">
+        <!-- Botón cerrar dentro del menú -->
+        <label for="nav-toggle" class="nav-close" aria-label="Cerrar menú">
+          <span class="sprite sprite-close"></span>
+        </label>
+
+        <ul class="nav-list">
+          <li>
+            <a href="#" class="nav-link active">
+              <span class="sprite sprite-dashboard"></span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#metricas" class="nav-link">
+              <span class="sprite sprite-sensor"></span>
+              Sensores
+            </a>
+          </li>
+          <li>
+            <a href="#alertas" class="nav-link">
+              <span class="sprite sprite-alert"></span>
+              Alertas
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link">
+              <span class="sprite sprite-settings"></span>
+              Config
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       CONTENIDO PRINCIPAL
+  ════════════════════════════════════════ -->
+  <main class="main-layout">
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-tag">Sistema de monitoreo IoT · En línea</p>
+      <h1 class="hero-title">Infinity<span>Grid</span></h1>
+      <p class="hero-sub">Calidad del agua · Tiempo real</p>
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span>12 sensores activos</span>
+      </div>
+    </section>
+
+    <!-- Métricas IoT -->
+    <section id="metricas">
+      <h2 class="section-title">Métricas IoT</h2>
+      <div class="metrics-grid">
+
+        <!-- pH -->
+        <article class="metric-card card-ph">
+          <div class="card-header">
+            <span class="card-label">pH</span>
+            <span class="card-badge good">Normal</span>
+          </div>
+          <div class="card-value">7.4</div>
+          <div class="card-unit">Unidades de pH</div>
+          <div class="card-bar"><div class="card-bar-fill" style="--fill:74%"></div></div>
+          <p class="card-info">Rango óptimo: 6.5 – 8.5</p>
+        </article>
+
+        <!-- Oxígeno -->
+        <article class="metric-card card-oxygen">
+          <div class="card-header">
+            <span class="card-label">Oxígeno disuelto</span>
+            <span class="card-badge warning">Bajo</span>
+          </div>
+          <div class="card-value">5.2</div>
+          <div class="card-unit">mg/L</div>
+          <div class="card-bar"><div class="card-bar-fill" style="--fill:52%"></div></div>
+          <p class="card-info">Mínimo recomendado: 6 mg/L</p>
+        </article>
+
+        <!-- Temperatura -->
+        <article class="metric-card card-temp">
+          <div class="card-header">
+            <span class="card-label">Temperatura</span>
+            <span class="card-badge good">Normal</span>
+          </div>
+          <div class="card-value">23.1</div>
+          <div class="card-unit">°C</div>
+          <div class="card-bar"><div class="card-bar-fill" style="--fill:58%"></div></div>
+          <p class="card-info">Rango óptimo: 18 – 28 °C</p>
+        </article>
+
+        <!-- Salinidad -->
+        <article class="metric-card card-salin">
+          <div class="card-header">
+            <span class="card-label">Salinidad</span>
+            <span class="card-badge good">Normal</span>
+          </div>
+          <div class="card-value">32.5</div>
+          <div class="card-unit">PSU</div>
+          <div class="card-bar"><div class="card-bar-fill" style="--fill:65%"></div></div>
+          <p class="card-info">Rango óptimo: 28 – 35 PSU</p>
+        </article>
+
+        <!-- Turbidez -->
+        <article class="metric-card card-turb">
+          <div class="card-header">
+            <span class="card-label">Turbidez</span>
+            <span class="card-badge danger">Crítico</span>
+          </div>
+          <div class="card-value">18.9</div>
+          <div class="card-unit">NTU</div>
+          <div class="card-bar"><div class="card-bar-fill" style="--fill:89%"></div></div>
+          <p class="card-info">Máximo permitido: 10 NTU</p>
+        </article>
+
+        <!-- Amoniaco -->
+        <article class="metric-card card-ammon">
+          <div class="card-header">
+            <span class="card-label">Amoniaco</span>
+            <span class="card-badge good">Normal</span>
+          </div>
+          <div class="card-value">0.02</div>
+          <div class="card-unit">mg/L NH₃</div>
+          <div class="card-bar"><div class="card-bar-fill" style="--fill:10%"></div></div>
+          <p class="card-info">Máximo permitido: 0.05 mg/L</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Alertas -->
+    <section id="alertas">
+      <h2 class="section-title">Alertas del Sistema</h2>
+      <div class="alerts-list">
+
+        <div class="alert-item alert-danger">
+          <span class="sprite sprite-alert"></span>
+          <div>
+            <strong>Turbidez crítica — Estanque 3</strong>
+            <p>Nivel supera el umbral. Revisar filtros inmediatamente.</p>
+          </div>
+        </div>
+
+        <div class="alert-item alert-warning">
+          <span class="sprite sprite-alert"></span>
+          <div>
+            <strong>Oxígeno bajo — Estanque 7</strong>
+            <p>Nivel por debajo del mínimo recomendado. Activar aireación.</p>
+          </div>
+        </div>
+
+        <div class="alert-item alert-ok">
+          <span class="sprite sprite-alert"></span>
+          <div>
+            <strong>Sistema estabilizado — Estanque 1</strong>
+            <p>Todos los parámetros dentro del rango óptimo.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>AquaTech · Infinity-Grid · Sistema de Monitoreo IoT © 2025</p>
+  </footer>
+
+</body>
+</html>
